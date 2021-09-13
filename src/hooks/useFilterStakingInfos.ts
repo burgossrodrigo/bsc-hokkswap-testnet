@@ -8,12 +8,14 @@ export default function useFilterStakingInfos(
 ): StakingInfo[] {
   return useMemo(() => {
     if (isActive !== undefined) {
-      return stakingInfos.filter(s => s.active === isActive).sort((a, b) => {
-        if (a.apr === undefined || b.apr === undefined) {
-          return 0
-        }
-        return b.apr.greaterThan(a.apr) ? 1 : -1
-      })
+      return stakingInfos
+        .filter(s => s.active === isActive)
+        .sort((a, b) => {
+          if (a.apr === undefined || b.apr === undefined) {
+            return 0
+          }
+          return b.apr.greaterThan(a.apr) ? 1 : -1
+        })
     }
 
     if (onlyStaked !== undefined) {

@@ -14,7 +14,7 @@ export class Tokens {
   chainId?: ChainId
   rawTokens: TokenListToken[]
   tokens?: Token[]
-  
+
   constructor(chainId?: ChainId, tokens = [...DEFAULT_TOKEN_LIST.tokens]) {
     this.chainId = chainId
     this.rawTokens = tokens
@@ -65,34 +65,34 @@ export class Tokens {
 
   public find(key: string, value: string): Token[] | undefined {
     if (this.tokens === undefined) return undefined
-  
+
     switch (key) {
       case 'name':
-        return this.tokens.filter((token) => token?.name?.toLowerCase() === value.toLowerCase())
+        return this.tokens.filter(token => token?.name?.toLowerCase() === value.toLowerCase())
       case 'symbol':
-        return this.tokens.filter((token) => token?.symbol?.toLowerCase() === value.toLowerCase())
+        return this.tokens.filter(token => token?.symbol?.toLowerCase() === value.toLowerCase())
       case 'address':
-        return this.tokens.filter((token) => token?.address?.toLowerCase() === value.toLowerCase())
+        return this.tokens.filter(token => token?.address?.toLowerCase() === value.toLowerCase())
       default:
-        return this.tokens.filter((token) => token?.name?.toLowerCase() === value.toLowerCase())
+        return this.tokens.filter(token => token?.name?.toLowerCase() === value.toLowerCase())
     }
   }
 
   public first(key: string, value: string): Token | undefined {
     return this.find(key, value)?.[0]
   }
-  
+
   public convertTokens(tokens: TokenListToken[]): Token[] {
     const sdkTokens: Token[] = []
-  
+
     for (const token of tokens) {
       const sdkToken = this.convertToken(token)
       sdkTokens.push(sdkToken)
     }
-  
+
     return sdkTokens
   }
-  
+
   public convertToken(token: TokenListToken): Token {
     return new Token(token.chainId, token.address, token.decimals, token.symbol, token.name)
   }

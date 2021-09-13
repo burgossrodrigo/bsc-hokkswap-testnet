@@ -194,7 +194,6 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
 
   return (
     <StyledPositionCard border={border} bgColor={backgroundColor}>
- 
       <AutoColumn gap="12px">
         <FixedHeightRow>
           <AutoRow gap="8px">

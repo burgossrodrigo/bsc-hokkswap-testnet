@@ -9,7 +9,8 @@
   "tags": {},
   "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E/logo.png",
   "keywords": ["kishuswap"],
-  "tokens": [{
+  "tokens": [
+    {
       "name": "Wrapped Ether",
       "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       "symbol": "WETH",
@@ -49,24 +50,24 @@
       "chainId": 1,
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE/logo.png"
     },
-       {
+    {
       "name": "SpaceDawgs",
       "address": "0x9f8eef61b1ad834b44c089dbf33eb854746a6bf9",
       "symbol": "DAWGS",
       "decimals": 9,
       "chainId": 1,
       "logoURI": "https://assets.website-files.com/609aed0ee031b1555d8def04/60a40a7c6e547112bbfd7cc3_favicon-32x32.png"
-    },      
-             
-              {
+    },
+
+    {
       "name": "StarLink",
       "address": "0x8e6cd950ad6ba651f6dd608dc70e5886b1aa6b24",
       "symbol": "STARL",
       "decimals": 18,
       "chainId": 1,
       "logoURI": "https://etherscan.io/token/images/starlinktoken_32.png"
-    },   
-             
+    },
+
     {
       "name": "Fat Doge",
       "address": "0x76851a93977bea9264c32255b6457882035c7501",

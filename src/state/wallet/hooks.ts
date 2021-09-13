@@ -49,7 +49,7 @@ export function useETHBalances(
 /**
  * Returns a map of token addresses to their eventually consistent token balances for a single account.
  */
- export function useTokenBalancesWithLoadingIndicator(
+export function useTokenBalancesWithLoadingIndicator(
   address?: string,
   tokens?: (Token | undefined)[],
   method = 'balanceOf',

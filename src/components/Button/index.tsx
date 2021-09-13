@@ -122,7 +122,7 @@ export const ButtonSecondary = styled(Base)`
     border: 1px solid ${({ theme }) => theme.primary3};
   }
   &:hover {
-    border: 1px solid #BBB;
+    border: 1px solid #bbb;
   }
   &:active {
     box-shadow: 0 0 0 1pt ${({ theme }) => theme.primary4};
@@ -224,7 +224,7 @@ export const ButtonEmpty = styled(Base)`
 export const ButtonWhite = styled(Base)`
   border: 1px solid #edeef2;
   background-color: ${({ theme }) => theme.bg1};
-  color:  ${({ theme }) => theme.text1};
+  color: ${({ theme }) => theme.text1};
 
   &:focus {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

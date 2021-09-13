@@ -17,7 +17,6 @@ import { OutlineCard } from '../../components/Card'
 import useTotalCombinedTVL from '../../utils/useTotalCombinedTVL'
 import { useWalletModalToggle } from '../../state/application/hooks'
 
-
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
   width: 100%;
@@ -45,7 +44,7 @@ flex-direction: column;
 
 export default function Earn() {
   const { chainId, account } = useActiveWeb3React()
-  
+
   const toggleWalletModal = useWalletModalToggle()
 
   // staking info for connected account
@@ -61,13 +60,11 @@ export default function Earn() {
   const stakingRewardsExist = Boolean(typeof chainId === 'number' && (STAKING_REWARDS_INFO[chainId]?.length ?? 0) > 0)
 
   const TVLs = useTotalCombinedTVL(stakingInfos)
- 
+
   return (
-    
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
         <DataCard>
-        
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
@@ -75,7 +72,8 @@ export default function Earn() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                Deposit your Liquidity Provider (LP) tokens to receive $HOKKFi, the $HOKK ecosystem utility and governance token.
+                  Deposit your Liquidity Provider (LP) tokens to receive $HOKKFi, the $HOKK ecosystem utility and
+                  governance token.
                 </TYPE.white>
               </RowBetween>{' '}
               <ExternalLink
@@ -87,7 +85,6 @@ export default function Earn() {
               </ExternalLink>
             </AutoColumn>
           </CardSection>
-         
         </DataCard>
       </TopSection>
 
@@ -95,31 +92,29 @@ export default function Earn() {
         <DataRow style={{ alignItems: 'baseline' }}>
           <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Participating pools</TYPE.mediumHeader>
           {/* <Countdown exactEnd={stakingInfos?.[0]?.periodFinish} /> */}
-          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>              
-          {TVLs?.stakingPoolTVL?TVLs.stakingPoolTVL.toSignificant(3, {groupSeparator: ','}): '-'} ETH
-                </TYPE.mediumHeader>
+          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>
+            {TVLs?.stakingPoolTVL ? TVLs.stakingPoolTVL.toSignificant(3, { groupSeparator: ',' }) : '-'} ETH
+          </TYPE.mediumHeader>
         </DataRow>
-
 
         {!account ? (
           <ButtonLight onClick={toggleWalletModal}>Connect Wallet</ButtonLight>
-        ) : 
-        <PoolSection>
-          {stakingRewardsExist && stakingInfos?.length === 0 ? (
-            <Loader style={{ margin: 'auto' }} />
-          ) : !stakingRewardsExist ? (
-            <OutlineCard>No active pools</OutlineCard>
-          ) : stakingInfos?.length !== 0 && stakingInfosWithBalance.length === 0 ? (
-            <OutlineCard>No active pools</OutlineCard>
-          ) : (
-            stakingInfosWithBalance?.map(stakingInfo => {
-              // need to sort by added liquidity here
-              return <PoolCard key={stakingInfo.pid} stakingInfo={stakingInfo} isArchived={false}/>
-            })
-          )}
-        </PoolSection>
-      }
-
+        ) : (
+          <PoolSection>
+            {stakingRewardsExist && stakingInfos?.length === 0 ? (
+              <Loader style={{ margin: 'auto' }} />
+            ) : !stakingRewardsExist ? (
+              <OutlineCard>No active pools</OutlineCard>
+            ) : stakingInfos?.length !== 0 && stakingInfosWithBalance.length === 0 ? (
+              <OutlineCard>No active pools</OutlineCard>
+            ) : (
+              stakingInfosWithBalance?.map(stakingInfo => {
+                // need to sort by added liquidity here
+                return <PoolCard key={stakingInfo.pid} stakingInfo={stakingInfo} isArchived={false} />
+              })
+            )}
+          </PoolSection>
+        )}
       </AutoColumn>
     </PageWrapper>
   )

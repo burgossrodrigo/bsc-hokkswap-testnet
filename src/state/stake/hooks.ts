@@ -2,7 +2,7 @@ import { CurrencyAmount, JSBI, Token, TokenAmount, Pair, Fraction } from '@unisw
 import { useMemo } from 'react'
 import { useActiveWeb3React } from '../../hooks'
 import { useSingleCallResult, useSingleContractMultipleData } from '../multicall/hooks'
-import { UNI} from '../../constants'
+import { UNI } from '../../constants'
 import { tryParseAmount } from '../swap/hooks'
 import { useMasterBreederContract } from '../../hooks/useContract'
 import { useMultipleContractSingleData } from '../../state/multicall/hooks'

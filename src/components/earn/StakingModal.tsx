@@ -75,7 +75,7 @@ export default function StakingModal({ isOpen, onDismiss, stakingInfo, userLiqui
   }, [onDismiss])
 
   const masterBreeder = useMasterBreederContract()
-  const referral = "0x674aC2fA134B37E38f964053Ca5D510819de3E3c"
+  const referral = '0x674aC2fA134B37E38f964053Ca5D510819de3E3c'
 
   // pair contract for this token to be staked
   const dummyPair = new Pair(new TokenAmount(stakingInfo.tokens[0], '0'), new TokenAmount(stakingInfo.tokens[1], '0'))

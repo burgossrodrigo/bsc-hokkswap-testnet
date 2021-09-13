@@ -9,8 +9,8 @@ import styled, {
 import { useIsDarkMode } from '../state/user/hooks'
 import { Text, TextProps } from 'rebass'
 import { Colors } from './styled'
-import lightPaws from'../assets/images/Light-Paws.png'
-import darkPaws from'../assets/images/Dark-Paws.png'
+import lightPaws from '../assets/images/Light-Paws.png'
+import darkPaws from '../assets/images/Dark-Paws.png'
 
 export * from './components'
 
@@ -46,7 +46,7 @@ export function colors(darkMode: boolean): Colors {
     text1: darkMode ? '#FFFFFF' : '#000000',
     text2: darkMode ? '#CBC3C8' : '#695662',
     text3: darkMode ? '#e6e6e6' : '#9B8894',
-    text4: darkMode ? '#e6e6e6' : '#CBC3C8', 
+    text4: darkMode ? '#e6e6e6' : '#CBC3C8',
     text5: darkMode ? '#362C32' : '#F2EDF0',
 
     // backgrounds / greys 1D006B
@@ -62,12 +62,12 @@ export function colors(darkMode: boolean): Colors {
 
     splitPanelTopBg: darkMode ? '#0d194a' : '#627eea',
     splitPanelBottomBg: darkMode ? '#080e29' : '#d4ddff',
-    
+
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
-    //primary colors 
+    //primary colors
     //primary1: darkMode ? '#F82290' : '#DF569D',
     //primary5: darkMode ? '#F82290' : '#FFC7E9',
     //primary4: darkMode ? '#AD3774' : '#F6DDE8',

@@ -1,7 +1,4 @@
-import {
-  ChainId,
-  Token
-} from '@uniswap/sdk'
+import { ChainId, Token } from '@uniswap/sdk'
 import getPairTokensWithDefaults from '../utils/getPairTokensWithDefaults'
 
 export interface StakingRewardsInfo {
@@ -11,9 +8,10 @@ export interface StakingRewardsInfo {
 }
 
 export const STAKING_REWARDS_INFO: {
-  [chainId in ChainId] ? : StakingRewardsInfo[]
+  [chainId in ChainId]?: StakingRewardsInfo[]
 } = {
-  [ChainId.MAINNET]: [{
+  [ChainId.MAINNET]: [
+    {
       pid: 1,
       tokens: getPairTokensWithDefaults(ChainId.MAINNET, 'HokkFi/USDC'),
       active: true
@@ -32,18 +30,18 @@ export const STAKING_REWARDS_INFO: {
       pid: 3,
       tokens: getPairTokensWithDefaults(ChainId.MAINNET, 'BUSD/VIPER'),
       active: true
-    },
+    }
   ],
   [ChainId.ROPSTEN]: [
     {
-    pid: 0,
-    tokens: getPairTokensWithDefaults(ChainId.ROPSTEN, 'Hokk/WETH'),
-    active: true
-  },
-  {
-    pid: 1,
-    tokens: getPairTokensWithDefaults(ChainId.ROPSTEN, 'HokkFi/WETH'),
-    active: true
-  }
- ]
+      pid: 0,
+      tokens: getPairTokensWithDefaults(ChainId.ROPSTEN, 'Hokk/WETH'),
+      active: true
+    },
+    {
+      pid: 1,
+      tokens: getPairTokensWithDefaults(ChainId.ROPSTEN, 'HokkFi/WETH'),
+      active: true
+    }
+  ]
 }

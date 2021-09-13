@@ -1,7 +1,7 @@
 import { Token, ETHER } from '@uniswap/sdk'
 import { unwrappedToken } from './wrappedCurrency'
 
-var DEFAULT_CURRENCIES = [ETHER];
+const DEFAULT_CURRENCIES = [ETHER]
 
 export default function determineBaseToken(tokenData: Record<string, any>, tokens: [Token, Token]): Token | undefined {
   const currency0 = unwrappedToken(tokens[0])

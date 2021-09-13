@@ -110,11 +110,7 @@ export function AdvancedSwapDetails({ trade }: AdvancedSwapDetailsProps) {
                 target="_blank"
               > */}
 
-              <InfoLink
-              
-              >
-                hokkX analytics (coming soon) ↗
-              </InfoLink>
+              <InfoLink>hokkX analytics (coming soon) ↗</InfoLink>
             </AutoColumn>
           )}
         </>

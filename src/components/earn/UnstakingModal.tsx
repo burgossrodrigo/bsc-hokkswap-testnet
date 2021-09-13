@@ -37,7 +37,7 @@ export default function UnstakingModal({ isOpen, onDismiss, stakingInfo }: Staki
   const [attempting, setAttempting] = useState(false)
   const [failed, setFailed] = useState<boolean>(false)
 
-  const referral = "0x674aC2fA134B37E38f964053Ca5D510819de3E3c"
+  const referral = '0x674aC2fA134B37E38f964053Ca5D510819de3E3c'
 
   function wrappedOnDismiss() {
     setHash(undefined)

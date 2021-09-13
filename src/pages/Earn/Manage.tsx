@@ -177,7 +177,7 @@ export default function Manage({
           <AutoColumn gap="sm">
             <TYPE.body style={{ margin: 0 }}>Emission Rate</TYPE.body>
             <TYPE.body fontSize={24} fontWeight={500}>
-            {stakingInfo
+              {stakingInfo
                 ? stakingInfo.active
                   ? `${stakingInfo.poolRewardsPerBlock.toSignificant(4, { groupSeparator: ',' })} 
                   ${govToken?.symbol} / block`
@@ -190,7 +190,6 @@ export default function Manage({
 
       {showAddLiquidityButton && (
         <VoteCard>
-          
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
@@ -240,7 +239,6 @@ export default function Manage({
         <BottomSection gap="lg" justify="center">
           <StyledDataCard disabled={disableTop} bgColor={backgroundColor} showBackground={!showAddLiquidityButton}>
             <CardSection>
-              
               <AutoColumn gap="md">
                 <RowBetween>
                   <TYPE.white fontWeight={600}>Your liquidity deposits</TYPE.white>
@@ -257,7 +255,6 @@ export default function Manage({
             </CardSection>
           </StyledDataCard>
           <StyledBottomCard dim={stakingInfo?.stakedAmount?.equalTo(JSBI.BigInt(0))}>
-            
             <AutoColumn gap="sm">
               <RowBetween>
                 <div>

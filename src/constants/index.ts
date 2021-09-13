@@ -39,34 +39,33 @@ const UNI_ADDRESS = '0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E'
 export const UNI: { [chainId in ChainId]: Token } = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, "0x927dE6686859E23745F03Aa0DFaE1783fE932393", 18, 'UNI', 'Uniswap'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, '0x927dE6686859E23745F03Aa0DFaE1783fE932393', 18, 'UNI', 'Uniswap'),
   [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS, 18, 'UNI', 'Uniswap')
 }
 
 export const MASTER_BREEDER: { [chainId in ChainId]: string } = {
-  [ChainId.MAINNET]: "0x8E7Cfa9685935fd87562E5749eFCAF64Eef61DD6",
+  [ChainId.MAINNET]: '0x8E7Cfa9685935fd87562E5749eFCAF64Eef61DD6',
   [ChainId.RINKEBY]: ZERO_ADDRESS,
-  [ChainId.ROPSTEN]: "0x5c72fedb007a553916ceea172c70f7f1f9aa514c",
+  [ChainId.ROPSTEN]: '0x5c72fedb007a553916ceea172c70f7f1f9aa514c',
   [ChainId.GÖRLI]: ZERO_ADDRESS,
-  [ChainId.KOVAN]: ZERO_ADDRESS,
+  [ChainId.KOVAN]: ZERO_ADDRESS
 }
 
 export const PIT_BREEDER: { [chainId in ChainId]: string } = {
-  [ChainId.MAINNET]: "0x38a75B033c2C3444Cb91D580645F76d042F98EdA",
+  [ChainId.MAINNET]: '0x38a75B033c2C3444Cb91D580645F76d042F98EdA',
   [ChainId.RINKEBY]: ZERO_ADDRESS,
-  [ChainId.ROPSTEN]: "0x66Ffcd599be52aAD6d339F91f36a0419FCDe7018",
+  [ChainId.ROPSTEN]: '0x66Ffcd599be52aAD6d339F91f36a0419FCDe7018',
   [ChainId.GÖRLI]: ZERO_ADDRESS,
-  [ChainId.KOVAN]: ZERO_ADDRESS,
+  [ChainId.KOVAN]: ZERO_ADDRESS
 }
 
 export const PIT: { [chainId in ChainId]: Token } = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, ZERO_ADDRESS, 18, 'xVIPER', 'ViperPit'),
   [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, ZERO_ADDRESS, 18, 'xVIPER', 'ViperPit'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, "0x561487C0d886E856A1078c4AeB326CD7bBCfFC3f", 18, 'HokkFi', 'HokkFi'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, '0x561487C0d886E856A1078c4AeB326CD7bBCfFC3f', 18, 'HokkFi', 'HokkFi'),
   [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, ZERO_ADDRESS, 18, 'xVIPER', 'ViperPit'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, ZERO_ADDRESS, 18, 'xVIPER', 'ViperPit'),
-
+  [ChainId.KOVAN]: new Token(ChainId.KOVAN, ZERO_ADDRESS, 18, 'xVIPER', 'ViperPit')
 }
 
 export const PIT_SETTINGS: { [chainId in ChainId]: Record<string, string> } = {
@@ -78,11 +77,11 @@ export const PIT_SETTINGS: { [chainId in ChainId]: Record<string, string> } = {
 }
 
 export const GOVERNANCE_TOKEN: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, "0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E", 18, 'HokkFi', 'HokkFi'),
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E', 18, 'HokkFi', 'HokkFi'),
   [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, ZERO_ADDRESS, 18, 'HokkFi', 'HokkFi'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, "0x927dE6686859E23745F03Aa0DFaE1783fE932393", 18, 'HokkFi', 'HokkFi'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, '0x927dE6686859E23745F03Aa0DFaE1783fE932393', 18, 'HokkFi', 'HokkFi'),
   [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, ZERO_ADDRESS, 18, 'VIPER', 'Viper'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, ZERO_ADDRESS, 18, 'VIPER', 'Viper'),
+  [ChainId.KOVAN]: new Token(ChainId.KOVAN, ZERO_ADDRESS, 18, 'VIPER', 'Viper')
 }
 
 export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {

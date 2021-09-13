@@ -314,7 +314,12 @@ export default function Swap({ history }: RouteComponentProps) {
         onDismiss={handleDismissTokenWarning}
       />
       <SwapPoolTabs active={'swap'} />
-      <img width={'235px'} style={{marginBottom: '15px', marginTop: '-40px'}} src={darkMode ? LogoDark : Logo} alt="logo" />
+      <img
+        width={'235px'}
+        style={{ marginBottom: '15px', marginTop: '-40px' }}
+        src={darkMode ? LogoDark : Logo}
+        alt="logo"
+      />
       <AppBody>
         <SwapHeader />
         <Wrapper id="swap-page">

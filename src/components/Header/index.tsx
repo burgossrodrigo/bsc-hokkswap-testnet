@@ -329,8 +329,7 @@ export default function Header() {
       </Modal>
       <HeaderRow>
         <Title href=".">
-          <UniIcon>
-          </UniIcon>
+          <UniIcon></UniIcon>
         </Title>
         <HeaderLinks>
           <StyledNavLink as="a" href="https://hokk.finance/" target="_blank">
@@ -339,7 +338,10 @@ export default function Header() {
           <StyledNavLink id={`swap-nav-link`} to={'/swap'}>
             {t('swap')}
           </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://www.dextools.io/app/uniswap/pair-explorer/0x9314941c11d6dee1d7bf93113eb74d4718949f3b'}>
+          <StyledExternalLink
+            id={`stake-nav-link`}
+            href={'https://www.dextools.io/app/uniswap/pair-explorer/0x9314941c11d6dee1d7bf93113eb74d4718949f3b'}
+          >
             Chart <span style={{ fontSize: '11px' }}>↗</span>
           </StyledExternalLink>
           <StyledNavLink
@@ -358,12 +360,7 @@ export default function Header() {
           <StyledNavLink id={`stake-nav-link`} to={`${pitSettings?.path}`}>
             {pitSettings?.name}
           </StyledNavLink>
-          <ResponsiveButtonPrimary
-                  id="join-pool-button"
-                  as={Link}
-                  padding="4px 14px"
-                  borderRadius="12px"
-            to='/staking'>
+          <ResponsiveButtonPrimary id="join-pool-button" as={Link} padding="4px 14px" borderRadius="12px" to="/staking">
             {t('Farming')}
           </ResponsiveButtonPrimary>
         </HeaderLinks>

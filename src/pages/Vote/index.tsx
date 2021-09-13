@@ -146,15 +146,11 @@ export default function Vote() {
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                HokkFi tokens represent voting shares in HokkFi governance. You can vote on each proposal yourself or
+                  HokkFi tokens represent voting shares in HokkFi governance. You can vote on each proposal yourself or
                   delegate your votes to a third party.
                 </TYPE.white>
               </RowBetween>
-              <ExternalLink
-                style={{ color: 'white', textDecoration: 'underline' }}
-                href="#"
-                target="_blank"
-              >
+              <ExternalLink style={{ color: 'white', textDecoration: 'underline' }} href="#" target="_blank">
                 <TYPE.white fontSize={14}>Read more about HokkFi governance</TYPE.white>
               </ExternalLink>
             </AutoColumn>

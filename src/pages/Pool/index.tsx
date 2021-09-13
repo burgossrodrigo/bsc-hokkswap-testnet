@@ -111,7 +111,7 @@ export default function Pool() {
 
   // show liquidity even if its deposited in rewards contract
   const stakingInfo = useStakingInfo(true)
-  console.log("allV2PairsWithLiquidity is", allV2PairsWithLiquidity)
+  console.log('allV2PairsWithLiquidity is', allV2PairsWithLiquidity)
   const stakingInfosWithBalance = stakingInfo?.filter(pool => JSBI.greaterThan(pool.stakedAmount.raw, BIG_INT_ZERO))
   const stakingPairs = usePairs(stakingInfosWithBalance?.map(stakingInfo => stakingInfo.tokens))
 
@@ -129,7 +129,6 @@ export default function Pool() {
       <PageWrapper>
         <SwapPoolTabs active={'pool'} />
         <DataCard>
-         
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
@@ -149,7 +148,6 @@ export default function Pool() {
               </ExternalLink>
             </AutoColumn>
           </CardSection>
-          
         </DataCard>
 
         <AutoColumn gap="lg" justify="center">

@@ -32,7 +32,7 @@ export default function useTokensWithWethPrices(): Record<string, any> {
   return useMemo(() => {
     return {
       WETH: { token: weth, price: undefined },
-      govToken: { token: govToken, price: govTokenWETHPrice },
+      govToken: { token: govToken, price: govTokenWETHPrice }
       // BUSD: { token: BUSD, price: BUSDWETHPrice },
       // USDC: { token: USDC, price: USDCWETHPrice },
       // bscBUSD: { token: bscBUSD, price: bscBUSDWETHPrice },
@@ -43,7 +43,7 @@ export default function useTokensWithWethPrices(): Record<string, any> {
     // blockchain,
     weth,
     govToken,
-    govTokenWETHPrice,
+    govTokenWETHPrice
     // BUSD,
     // BUSDWETHPrice,
     // USDC,

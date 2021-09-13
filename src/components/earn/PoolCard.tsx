@@ -46,10 +46,8 @@ const Wrapper = styled(AutoColumn)<{ showBackground: boolean; bgColor: any }>`
   overflow: hidden;
   position: relative;
   opacity: ${({ showBackground }) => (showBackground ? '1' : '1')};
-  background: ${({ theme, bgColor, showBackground }) =>
-  `${bgColor}`};
+  background: ${({ theme, bgColor, showBackground }) => `${bgColor}`};
   color: ${({ theme, showBackground }) => (showBackground ? '#BFBFBF' : theme.text1)} !important;
-
 
   ${({ showBackground }) =>
     showBackground &&
@@ -96,8 +94,6 @@ export default function PoolCard({ stakingInfo, isArchived }: { stakingInfo: Sta
 
   return (
     <Wrapper showBackground={isStaking} bgColor={backgroundColor}>
-
-
       <TopSection>
         <DoubleCurrencyLogo currency0={currency0} currency1={currency1} size={24} />
         <TYPE.white fontWeight={600} fontSize={24} style={{ marginLeft: '8px' }}>
@@ -164,10 +160,7 @@ export default function PoolCard({ stakingInfo, isArchived }: { stakingInfo: Sta
                     ? `${stakingInfo.unlockedEarnedAmount.toSignificant(4, { groupSeparator: ',' })} ${
                         govToken?.symbol
                       } / $${
-                        govTokenPrice
-                          ? stakingInfo.unlockedEarnedAmount
-                              .toSignificant(2, { groupSeparator: ',' })
-                          : '0'
+                        govTokenPrice ? stakingInfo.unlockedEarnedAmount.toSignificant(2, { groupSeparator: ',' }) : '0'
                       }`
                     : `0 ${govToken?.symbol}`
                   : '-'}
@@ -184,10 +177,7 @@ export default function PoolCard({ stakingInfo, isArchived }: { stakingInfo: Sta
                     ? `${stakingInfo.lockedEarnedAmount.toSignificant(4, { groupSeparator: ',' })} ${
                         govToken?.symbol
                       } / $${
-                        govTokenPrice
-                          ? stakingInfo.lockedEarnedAmount
-                              .toSignificant(2, { groupSeparator: ',' })
-                          : '0'
+                        govTokenPrice ? stakingInfo.lockedEarnedAmount.toSignificant(2, { groupSeparator: ',' }) : '0'
                       }`
                     : `0 ${govToken?.symbol}`
                   : '-'}
@@ -207,10 +197,7 @@ export default function PoolCard({ stakingInfo, isArchived }: { stakingInfo: Sta
               {stakingInfo
                 ? stakingInfo.active
                   ? `${stakingInfo.earnedAmount.toSignificant(4, { groupSeparator: ',' })} ${govToken?.symbol} / $${
-                      govTokenPrice
-                        ? stakingInfo.earnedAmount
-                            .toSignificant(2, { groupSeparator: ',' })
-                        : '0'
+                      govTokenPrice ? stakingInfo.earnedAmount.toSignificant(2, { groupSeparator: ',' }) : '0'
                     }`
                   : `0 ${govToken?.symbol}`
                 : '-'}

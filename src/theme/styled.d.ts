@@ -21,11 +21,11 @@ export interface Colors {
   bg5: Color
   bg6: Color
 
-  panelBorder: Color,
-  
-  splitPanelTopBg: Color,
-  splitPanelBottomBg: Color,
-  
+  panelBorder: Color
+
+  splitPanelTopBg: Color
+  splitPanelBottomBg: Color
+
   modalBG: Color
   advancedBG: Color
 
