@@ -1,3 +1,6 @@
+
+export {}
+/*
 import { UNI } from './../../constants/index'
 import { TokenAmount, JSBI, ChainId } from '@uniswap/sdk'
 import { TransactionResponse } from '@ethersproject/providers'
@@ -120,3 +123,5 @@ export function useClaimCallback(
 
   return { claimCallback }
 }
+
+*/

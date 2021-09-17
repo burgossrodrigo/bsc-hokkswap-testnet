@@ -26,7 +26,7 @@ import Menu from '../Menu'
 
 import Row, { RowFixed } from '../Row'
 import Web3Status from '../Web3Status'
-import ClaimModal from '../claim/ClaimModal'
+//import ClaimModal from '../claim/ClaimModal'
 // import { useUserHasAvailableClaim } from '../../state/claim/hooks'
 import Modal from '../Modal'
 import UniBalanceContent from './UniBalanceContent'
@@ -319,7 +319,7 @@ export default function Header() {
 
   return (
     <HeaderFrame>
-      <ClaimModal />
+      {/*<ClaimModal />*/}
       <Modal isOpen={showUniBalanceModal} onDismiss={() => setShowUniBalanceModal(false)}>
         <UniBalanceContent setShowUniBalanceModal={setShowUniBalanceModal} />
       </Modal>

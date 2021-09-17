@@ -1,5 +1,4 @@
-
-import { UNI } from './../../constants/index'
+//import { UNI } from './../../constants/index'
 import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount } from '@uniswap/sdk'
 import { useMemo } from 'react'
 import ERC20_INTERFACE from '../../constants/abis/erc20'
@@ -8,7 +7,8 @@ import { useActiveWeb3React } from '../../hooks'
 import { useMulticallContract } from '../../hooks/useContract'
 import { isAddress } from '../../utils'
 import { useSingleContractMultipleData, useMultipleContractSingleData } from '../multicall/hooks'
-import { useUserUnclaimedAmount } from '../claim/hooks'
+//import { useUserUnclaimedAmount } from '../claim/hooks'
+//import { useTotalUniEarned } from '../stake/hooks'
 
 /**
  * Returns a map of the given addresses to their eventually consistent ETH balances.
@@ -142,7 +142,7 @@ export function useAllTokenBalances(): { [tokenAddress: string]: TokenAmount | u
   const balances = useTokenBalances(account ?? undefined, allTokensArray)
   return balances ?? {}
 }
-
+/*
 // get the total owned, unclaimed, and unharvested UNI for account
 export function useAggregateUniBalance(): TokenAmount | undefined {
   const { account, chainId } = useActiveWeb3React()
@@ -150,8 +150,8 @@ export function useAggregateUniBalance(): TokenAmount | undefined {
   const uni = chainId ? UNI[chainId] : undefined
 
   const uniBalance: TokenAmount | undefined = useTokenBalance(account ?? undefined, uni)
-  const uniUnclaimed: TokenAmount | undefined = useUserUnclaimedAmount(account)
-  const uniUnHarvested: TokenAmount | undefined = useTotalUniEarned()
+ // const uniUnclaimed: TokenAmount | undefined = useUserUnclaimedAmount(account)
+  //const uniUnHarvested: TokenAmount | undefined = useTotalUniEarned()
 
   if (!uni) return undefined
 
@@ -163,7 +163,4 @@ export function useAggregateUniBalance(): TokenAmount | undefined {
     )
   )
 }
-function useTotalUniEarned(): TokenAmount | undefined {
-  throw new Error('Function not implemented.')
-}
-
+*/

@@ -6,7 +6,7 @@ import tokenLogo from '../../assets/images/token-logo.png'
 import { UNI } from '../../constants'
 import { useTotalSupply } from '../../data/TotalSupply'
 import { useActiveWeb3React } from '../../hooks'
-import { useAggregateUniBalance, useTokenBalance } from '../../state/wallet/hooks'
+//import { useAggregateUniBalance, useTokenBalance } from '../../state/wallet/hooks'
 import { ExternalLink, TYPE, UniTokenAnimated } from '../../theme'
 import useUSDCPrice from '../../utils/useUSDCPrice'
 import { AutoColumn } from '../Column'
@@ -40,8 +40,8 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
   const { account, chainId } = useActiveWeb3React()
   const uni = chainId ? UNI[chainId] : undefined
 
-  const total = useAggregateUniBalance()
-  const uniBalance: TokenAmount | undefined = useTokenBalance(account ?? undefined, uni)
+ // const total = useAggregateUniBalance()
+  // const uniBalance: TokenAmount | undefined = useTokenBalance(account ?? undefined, uni)
 
   const totalSupply: TokenAmount | undefined = useTotalSupply(uni)
   const uniPrice = useUSDCPrice(uni)
@@ -64,13 +64,13 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
               <AutoColumn gap="md" justify="center">
                 <UniTokenAnimated width="96px" src={tokenLogo} />{' '}
                 <TYPE.white fontSize={48} fontWeight={600} color="white">
-                  {total?.toFixed(0, { groupSeparator: ',' })} B
+                  {/*total?.toFixed(0, { groupSeparator: ',' })*/} B
                 </TYPE.white>
               </AutoColumn>
               <AutoColumn gap="md">
                 <RowBetween>
                   <TYPE.white color="white">Balance:</TYPE.white>
-                  <TYPE.white color="white">{uniBalance?.toFixed(2, { groupSeparator: ',' })} B</TYPE.white>
+                  {/*<TYPE.white color="white">{uniBalance?.toFixed(2, { groupSeparator: ',' })} B</TYPE.white>*/}
                 </RowBetween>
               </AutoColumn>
             </CardSection>
