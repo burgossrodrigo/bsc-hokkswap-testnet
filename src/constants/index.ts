@@ -34,20 +34,17 @@ export const GOVERNANCE_ADDRESS = '0x36a92f809da8c2072b090a9e3322226c5376b207'
 
 export const TIMELOCK_ADDRESS = '0xa1f482dc58145ba2210bc21878ca34000e2e8fe4'
 
-
-const UNI_ADDRESS = '0xBf5140A22578168FD562DCcF235E5D43A02ce9B1'
+// const UNI_ADDRESS = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
+const UNI_ADDRESS = '0x36a92f809da8c2072b090a9e3322226c5376b207'
 export const UNI: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0x36a92f809da8c2072b090a9e3322226c5376b207', 18, 'HOKK ', 'Hokkaido Inu')
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'UNI ', 'Binance-Peg Uniswap')
 }
 
-/*
 export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
   [UNI_ADDRESS]: 'UNI',
   [GOVERNANCE_ADDRESS]: 'Governance',
   [TIMELOCK_ADDRESS]: 'Timelock'
 }
-
-*/
 
 // TODO: specify merkle distributor for mainnet
 export const MERKLE_DISTRIBUTOR_ADDRESS: { [chainId in ChainId]?: string } = {
